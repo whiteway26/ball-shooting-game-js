@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ball Shooting Game JS</title>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.0/gsap.min.js"
+      integrity="sha512-1dalHDkG9EtcOmCnoCjiwQ/HEB5SDNqw8d4G2MKoNwjiwMNeBAkudsBCmSlMnXdsH8Bm0mOd3tl/6nL5y0bMaQ=="
+      crossorigin="anonymous"
+    ></script>
+    <script defer src="index.js"></script>
+
+    <style>
+      * {
+        margin: 0;
+      }
+
+      body {
+        position: relative;
+        font-family: sans-serif;
+        background-color: rgb(0, 0, 0);
+      }
+      body::-webkit-scrollbar {
+        width: 5px;
+      }
+      body::-webkit-scrollbar-thumb {
+        background-color: rgb(95, 95, 255);
+      }
+      body::-webkit-scrollbar-track {
+        background-color: white;
+      }
+
+      .score {
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: 1;
+        color: #fff;
+        margin-top: 0.75em;
+        margin-left: 0.75em;
+      }
+
+      .game-over-ui {
+        min-width: 25vw;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        z-index: 9;
+        padding: 1em;
+        transform: translate(-50%, -50%);
+        background-color: rgb(255, 253, 253);
+      }
+
+      h1 {
+        font-size: 5rem;
+        font-weight: 600;
+        text-align: center;
+        color: #323278;
+      }
+
+      p {
+        text-align: center;
+        font-weight: 600;
+        font-size: 2rem;
+      }
+
+      button {
+        display: block;
+        padding: 1em 2em;
+        margin: 2em auto 0;
+        border: 0;
+        outline: none;
+        background-color: rgb(59, 59, 255);
+        color: #fff;
+        border-radius: 0.5em;
+        cursor: pointer;
+      }
+
+      button:hover {
+        background-color: rgba(59, 59, 255, 0.9);
+      }
+    </style>
+  </head>
+  <body>
+    <div class="score"><span>Score: </span><span id="scoreElem">0</span></div>
+    <div class="game-over-ui" id="startGameElem">
+      <h1 id="finalScore">0</h1>
+      <p>Points</p>
+      <button id="startGameBtn">Start Game</button>
+    </div>
+    <canvas></canvas>
+  </body>
+</html>
